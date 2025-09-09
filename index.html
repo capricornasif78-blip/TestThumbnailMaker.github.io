@@ -1,47 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zyper MC Hosting</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyper Mc Hosting</title>
   <style>
-    body {margin:0; font-family:Arial, sans-serif; background:#0f172a; color:#f8fafc; text-align:center;}
-    header {background:#1e293b; padding:20px;}
-    header h1 {margin:0; color:#38bdf8;}
-    nav a {color:#f8fafc; margin:0 15px; text-decoration:none; font-weight:bold;}
-    nav a:hover {color:#38bdf8;}
-    section {padding:50px 20px;}
-    .btn {background:#38bdf8; color:#000; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold;}
-    .btn:hover {background:#0ea5e9;}
-    footer {background:#1e293b; padding:15px; margin-top:30px; font-size:0.9rem;}
+    :root {
+      --brand: #0d6efd;
+      --dark: #000000;
+      --light: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: var(--brand);
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: var(--light);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: var(--brand);
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://wallpapercave.com/wp/wp10463447.jpg') center/cover no-repeat;
+      color: var(--light);
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .plan {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .plan h3 {
+      color: var(--brand);
+      margin-bottom: 1rem;
+    }
+    .plan ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .plan ul li {
+      margin: 0.5rem 0;
+    }
+    .locations, .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+    .contact {
+      text-align: center;
+    }
+    footer {
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Zyper MC Hosting</h1>
+    <h1>Zyper Mc Hosting</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Plans</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#locations">Locations</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section>
-    <h2>Fast & Reliable Minecraft Hosting</h2>
-    <p>Get your Minecraft server online in seconds with Zyper MC Hosting.</p>
-    <a href="#" class="btn">Get Started</a>
+  <section class="hero">
+    <h2>Fast & Reliable Minecraft Hosting By Zyper</h2>
+    <p>Build your world with top notch performance, security, and 24/7 support.</p>
   </section>
 
-  <section style="background:#1e293b;">
-    <h2>Why Choose Us?</h2>
-    <p>⚡ Lag-free performance</p>
-    <p>🔒 Secure servers</p>
-    <p>🌍 Global access</p>
+  <section id="pricing">
+    <h2 style="text-align:center; margin-bottom:2rem;">Pricing Plans</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p><strong>$3.99 / month</strong></p>
+        <ul>
+          <li>50 Players</li>
+          <li>2 GB RAM</li>
+          <li>15 GB NVMe Storage</li>
+          <li>Free Subdomain</li>
+          <li>Daily Backups</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Diamond</h3>
+        <p><strong>$8.99 / month</strong></p>
+        <ul>
+          <li>150 Players</li>
+          <li>6 GB RAM</li>
+          <li>40 GB NVMe Storage</li>
+          <li>Unlimited Modpacks</li>
+          <li>On-demand Backups</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Netherite</h3>
+        <p><strong>$16.99 / month</strong></p>
+        <ul>
+          <li>Infinite Players</li>
+          <li>10 GB RAM</li>
+          <li>80 GB NVMe Storage</li>
+          <li>Priority Support</li>
+          <li>Advanced Scheduler</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="locations">
+    <h2 style="text-align:center; margin-bottom:2rem;">Our Global Server Locations</h2>
+    <div class="locations">
+      <div>🇵🇰 Pakistan<br><small>Low latency for local players</small></div>
+      <div>🇮🇳 India<br><small>Best connectivity in South Asia</small></div>
+      <div>🇳🇵 Nepal<br><small>Optimized routing via India</small></div>
+      <div>🇧🇩 Bangladesh<br><small>Reliable ping via India & Singapore</small></div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2 style="text-align:center; margin-bottom:2rem;">Why Choose Us?</h2>
+    <div class="features">
+      <div>⚡ Instant Setup</div>
+      <div>🛡️ DDoS Protection</div>
+      <div>💾 Free Daily Backups</div>
+      <div>🕹️ One-Click Mod & Plugin Installer</div>
+      <div>🌐 Free Subdomain</div>
+      <div>📞 24/7 Support</div>
+      <div>📈 99.9% Uptime Guarantee</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:capricornasif78@gmail.com">capricornasif78@gmail.com</a></p>
+    <p>Discord: saboor99</p>
   </section>
 
   <footer>
-    <p>© 2025 Zyper MC Hosting. All Rights Reserved.</p>
+    © 2025 Zyper Mc Hosting. All rights reserved.
   </footer>
 </body>
 </html>
+
