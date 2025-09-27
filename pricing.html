@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test Maker — Pricing</title>
+<style>
+  body{font-family:Inter,Arial;background:#f7fbff;color:#072036;margin:0}
+  .wrap{max-width:1100px;margin:18px auto;padding:18px}
+  header{display:flex;justify-content:space-between;align-items:center}
+  .cards{display:flex;gap:12px;margin-top:16px}
+  .card{flex:1;background:white;padding:14px;border-radius:12px;box-shadow:0 8px 22px rgba(8,16,40,.06);text-align:center}
+  .highlight{border:2px solid rgba(0,114,255,.12);transform:scale(1.02)}
+  .btn{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,#00c6ff,#0072ff);color:white;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#00c6ff,#0072ff);display:grid;place-items:center;color:white;font-weight:800">T</div>
+        <div><div style="font-weight:800">Test Maker — Pricing</div><div style="font-size:13px;color:#6b7280">Choose plan that fits you</div></div>
+      </div>
+      <div><a href="index.html" style="text-decoration:none;color:#072036;font-weight:700">Back to Editor</a></div>
+    </header>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Free</h3>
+        <div style="color:#6b7280">Basic templates, limited exports</div>
+        <div style="font-weight:800;margin-top:12px">$0 / month</div>
+        <a class="btn" href="index.html">Start Free</a>
+      </div>
+
+      <div class="card highlight">
+        <h3>Pro</h3>
+        <div style="color:#6b7280">Unlimited exports, premium templates, AI tools</div>
+        <div style="font-weight:800;margin-top:12px">$7 / month</div>
+        <a class="btn" href="index.html">Get Pro</a>
+      </div>
+
+      <div class="card">
+        <h3>Premium</h3>
+        <div style="color:#6b7280">Team seats, brand kit, priority support</div>
+        <div style="font-weight:800;margin-top:12px">$19 / month</div>
+        <a class="btn" href="index.html">Get Premium</a>
+      </div>
+    </div>
+
+    <footer style="margin-top:22px;color:#6b7280">Note: Pricing is sample only. Implement payments via Stripe/PayPal when ready.</footer>
+  </div>
+</body>
+</html>
