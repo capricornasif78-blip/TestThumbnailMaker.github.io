@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Maker - Templates</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .templates {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .templates h1 {
+      margin-bottom: 2rem;
+    }
+
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .template-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .template-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .template-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .template-card button {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      background: #3b82f6;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .template-card button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Test Maker</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="editor.html">Editor</a></li>
+        <li><a href="templates.html" class="active">Templates</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Templates Section -->
+  <section class="templates">
+    <h1>Choose a Template</h1>
+    <div class="template-grid">
+      <!-- Template 1 -->
+      <div class="template-card">
+        <img src="assets/templates/template1.jpg" alt="Template 1" />
+        <button onclick="useTemplate('assets/templates/template1.jpg')">Use Template</button>
+      </div>
+      <!-- Template 2 -->
+      <div class="template-card">
+        <img src="assets/templates/template2.jpg" alt="Template 2" />
+        <button onclick="useTemplate('assets/templates/template2.jpg')">Use Template</button>
+      </div>
+      <!-- Template 3 -->
+      <div class="template-card">
+        <img src="assets/templates/template3.jpg" alt="Template 3" />
+        <button onclick="useTemplate('assets/templates/template3.jpg')">Use Template</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Test Maker. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function useTemplate(imgPath) {
+      localStorage.setItem("chosenTemplate", imgPath);
+      window.location.href = "editor.html";
+    }
+  </script>
+</body>
+</html>
